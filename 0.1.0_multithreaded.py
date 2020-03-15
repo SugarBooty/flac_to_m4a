@@ -42,7 +42,7 @@ def convert_song(input_info):
     if not os.path.exists(output_path):
         itt_start_time = time.time()
         print("Converting song {0} of {1}... Artist: {2}, Album: {3} Song: {4}".format(itt_count, total_songs, artist, album, song))
-        os.system("ffmpeg -i {0} -loglevel panic -q:v 1k {1}".format("\"" + input_path + "\"", "\"" + output_path + "\""))
+        os.system("ffmpeg -i {0} -loglevel panic -q:v 420k {1}".format("\"" + input_path + "\"", "\"" + output_path + "\""))
         itt_total_time = time.time() - itt_start_time
         print("Converted song  {0} of {1} - took {2}".format(itt_count, total_songs, time.strftime("%H:%M:%S", time.gmtime(itt_total_time))))
     else:
